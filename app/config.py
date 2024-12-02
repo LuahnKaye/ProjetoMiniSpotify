@@ -1,3 +1,5 @@
+# é config
+
 import os
 
 COSMOS_DB_URI = os.getenv("COSMOS_DB_URI", "https://minispotifydb.documents.azure.com:443/")
