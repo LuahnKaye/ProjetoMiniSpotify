@@ -1,16 +1,17 @@
 class User:
-    def __init__(self, email, name, password):
+    def __init__(self, user_id, email, name, password):
+        self.id = user_id
         self.email = email
         self.name = name
         self.password = password
 
     def to_dict(self):
         return {
+            "id": self.id,  # Inclui o ID como chave de partição
             "email": self.email,
             "name": self.name,
             "password": self.password
         }
-
 
 class Playlist:
     def __init__(self, user_id, name):
@@ -24,7 +25,6 @@ class Playlist:
             "name": self.name,
             "musics": self.musics
         }
-
 
 class Music:
     def __init__(self, name, artist):
